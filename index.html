@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lighthouse Holdings">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    
+    <title>Lighthouse Holdings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Importing a clean, versatile font for a premium corporate look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1a1a1a;
+            background: #42b2d7;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(135deg, #fbfaf8, #42b2d7);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(135deg, #fbfaf8 #42b2d7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+          
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Smooth fade-in animations for the content */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.6s; }
+        .delay-3 { animation-delay: 1.2s; }
+
+        /* Custom selection color for a cohesive monochrome experience */
+        ::selection {
+            background-color: #1a1a1a;
+            color: #fbfaf8;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen justify-between relative">
+    
+    <!-- Header / Navigation -->
+    <header class="w-full px-6 py-8 md:px-12 flex justify-between items-center fade-in delay-1 z-10">
+        <div class="text-xs md:text-lg tracking-[0.25em] uppercase font-semibold text-black-500">
+            Lighthouse Holdings
+        </div>
+        <a href="mailto:info@lighthouseholdings.com" class="text-xs md:text-lg tracking-widest uppercase text-black-500 hover:text-amber-500 transition-colors duration-300">
+            Contact
+        </a>
+    </header>
+
+    <!-- Main Content / Logo -->
+    <main class="flex-grow flex flex-col justify-center items-center px-4 text-center fade-in delay-2 z-10 w-full">
+        <!-- Logo Image -->
+        <img 
+            src="./img/logo.svg" 
+            alt="Lighthouse Holdings Logo" 
+            class="max-w-full w-[900px] h-auto object-contain px-4 md:px-8 py-4"
+        >
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full px-6 py-8 md:px-12 flex flex-col md:flex-row justify-between items-center text-[10px] md:text-xs tracking-[0.15em] text-black-500 fade-in delay-3 uppercase z-10">
+        <p class="mb-4 md:mb-0 text-center md:text-left">
+            &copy; 2026 Lighthouse Holdings &mdash; All Rights Reserved.
+        </p>
+        <a href="mailto:info@lighthouseholdings.com" class="hover:text-amber-500 transition-colors duration-300 text-center md:text-right">
+            info@lighthouseholdings.com
+        </a>
+    </footer>
+
+</body>
+</html>
